@@ -4,6 +4,10 @@ import youtube_dl
 
 
 def download_video(video_id, codec, resolution):
+    if resolution not in ['480p', '720p', '1080p']:
+        print("Invalid resolution, choose from: 480p, 720p, 1080p")
+        return
+
     options = {
         'format': codec + '/' + resolution,
         'outtmpl': 'downloads/%(title)s.%(ext)s',
@@ -23,5 +27,5 @@ def download_video(video_id, codec, resolution):
 if __name__ == '__main__':
     video_id = input("Enter video id: ")
     codec = input("Enter codec (mp4): ")
-    resolution = input("Enter resolution (360p/720p/1080p): ")
+    resolution = input("Enter resolution (480p/720p/1080p): ")
     download_video(video_id, codec, resolution)
