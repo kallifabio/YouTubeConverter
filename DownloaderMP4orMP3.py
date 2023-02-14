@@ -39,7 +39,7 @@ def download_video(video_id, codec, resolution):
 
 if __name__ == "__main__":
     if len(sys.argv) < 4:
-        print("Usage: python downloader.py <youtube_watch_id> <codec> <resolution>")
+        print("Usage: python DownloaderMP4orMP3.py <youtube_watch_id> <codec> <resolution>")
         sys.exit()
     video_id = sys.argv[1]
     codec = sys.argv[2]
